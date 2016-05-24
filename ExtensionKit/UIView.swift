@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  ExtensionKit
+//  UIView.swift
+//  ExtensionKitDemo
 //
 //  Created by wen on 16/5/24.
 //  Copyright © 2016年 wenfeng. All rights reserved.
