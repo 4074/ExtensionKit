@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FBCA4AA61D279457000BDBF8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA4AA51D279457000BDBF8 /* Color.swift */; };
+		FBCA4AA81D27AD20000BDBF8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA4AA71D27AD20000BDBF8 /* String.swift */; };
+		FBCA4AAA1D27B480000BDBF8 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA4AA91D27B480000BDBF8 /* UITableViewCell.swift */; };
+		FBCA4AAC1D27B4D2000BDBF8 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCA4AAB1D27B4D2000BDBF8 /* UILabel.swift */; };
 		FBE279B51CF3FC810022A951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE279B41CF3FC810022A951 /* AppDelegate.swift */; };
 		FBE279B71CF3FC810022A951 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE279B61CF3FC810022A951 /* ViewController.swift */; };
 		FBE279BA1CF3FC810022A951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE279B81CF3FC810022A951 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FBCA4AA51D279457000BDBF8 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FBCA4AA71D27AD20000BDBF8 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		FBCA4AA91D27B480000BDBF8 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		FBCA4AAB1D27B4D2000BDBF8 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		FBE279B11CF3FC800022A951 /* ExtensionKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE279B41CF3FC810022A951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE279B61CF3FC810022A951 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				FBE279CA1CF3FFD60022A951 /* UIView.swift */,
+				FBCA4AAB1D27B4D2000BDBF8 /* UILabel.swift */,
+				FBCA4AA91D27B480000BDBF8 /* UITableViewCell.swift */,
+				FBCA4AA51D279457000BDBF8 /* Color.swift */,
+				FBCA4AA71D27AD20000BDBF8 /* String.swift */,
 			);
 			name = ExtensionKit;
 			sourceTree = "<group>";
@@ -147,6 +159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE279B71CF3FC810022A951 /* ViewController.swift in Sources */,
+				FBCA4AA61D279457000BDBF8 /* Color.swift in Sources */,
+				FBCA4AA81D27AD20000BDBF8 /* String.swift in Sources */,
+				FBCA4AAC1D27B4D2000BDBF8 /* UILabel.swift in Sources */,
+				FBCA4AAA1D27B480000BDBF8 /* UITableViewCell.swift in Sources */,
 				FBE279CB1CF3FFD60022A951 /* UIView.swift in Sources */,
 				FBE279B51CF3FC810022A951 /* AppDelegate.swift in Sources */,
 			);
@@ -300,6 +316,7 @@
 				FBE279C51CF3FC810022A951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
