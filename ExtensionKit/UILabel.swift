@@ -6,7 +6,7 @@
 //  Copyright © 2016年 wenfeng. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 extension UILabel {
@@ -17,9 +17,8 @@ extension UILabel {
         do {
             let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
             self.attributedText = attributedString
-            
-        } catch err {
-            print(err)
+        } catch {
+            print("UILabel setHtmlText(\(html)) has errors!")
         }
     }
     

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-    convenience init(hexString: String, alpha: CGFloat = 1) {
+    public convenience init(hexString: String, alpha: CGFloat = 1) {
         let hexString = hexString.trim()
         let scanner = NSScanner(string: hexString)
         
