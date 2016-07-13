@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-    public convenience init(hexString: String, alpha: CGFloat = 1) {
+    public class func fromHexString(hexString: String, alpha: CGFloat = 1) -> UIColor {
         let hexString = hexString.trim()
         let scanner = NSScanner(string: hexString)
         
@@ -24,7 +24,7 @@ extension UIColor {
         let green = CGFloat((color & 0x00FF00) >> 8) / 255
         let blue = CGFloat((color & 0x0000FF)) / 255
         
-        self.init(red: red, green: green, blue: blue, alpha: alpha)
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     public func toHexString() -> String {
