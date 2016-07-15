@@ -22,4 +22,16 @@ extension UILabel {
         }
     }
     
+    public func setLineSpacing(spacing: CGFloat) {
+        if let text = self.text {
+            let attributeString = NSMutableAttributedString(string: text)
+            let style = NSMutableParagraphStyle()
+            
+            style.lineSpacing = spacing
+            style.alignment = self.textAlignment
+            attributeString.addAttributes([NSParagraphStyleAttributeName: style], range: NSRange(location: 0, length: text.characters.count))
+            self.attributedText = attributeString
+        }
+    }
+    
 }
