@@ -11,10 +11,10 @@ import Foundation
 extension String {
     
     public func trim() -> String {
-        return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
-    public func split(separator: Character) -> [String] {
-        return self.characters.split(separator).map(String.init)
+    public func split(_ separator: Character) -> [String] {
+        return self.characters.split(separator: separator).map(String.init)
     }
 }

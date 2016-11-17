@@ -12,8 +12,8 @@ extension UITableViewCell {
     
     public func setSeparatorInsetZero() {
         self.preservesSuperviewLayoutMargins = false
-        self.separatorInset = UIEdgeInsetsZero
-        self.layoutMargins = UIEdgeInsetsZero
+        self.separatorInset = UIEdgeInsets.zero
+        self.layoutMargins = UIEdgeInsets.zero
     }
     
 }
