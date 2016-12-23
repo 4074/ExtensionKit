@@ -10,12 +10,12 @@ import UIKit
 
 extension UIView {
     
-    public func setCornerRadius(radius: CGFloat) {
+    public func setCornerRadius(_ radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
     }
     
-    public func setFont(font: UIFont, tag: Int? = nil) {
+    public func setFont(_ font: UIFont, tag: Int? = nil) {
         if let label = self as? UILabel {
             if tag == nil || label.tag == tag {
                 label.font = font
@@ -49,7 +49,7 @@ extension UIView {
         }
     }
     
-    public func setFont(name: String, size: CGFloat, tag: Int? = nil) {
+    public func setFont(_ name: String, size: CGFloat, tag: Int? = nil) {
         if let font = UIFont(name: name, size: size) {
             self.setFont(font, tag: tag)
         } else {
@@ -58,11 +58,11 @@ extension UIView {
         
     }
     
-    public func setFont(size: CGFloat, tag: Int? = nil) {
-        self.setFont(UIFont.systemFontOfSize(size), tag: tag)
+    public func setFont(_ size: CGFloat, tag: Int? = nil) {
+        self.setFont(UIFont.systemFont(ofSize: size), tag: tag)
     }
     
-    public func setTextColor(color: UIColor, tag: Int? = nil) {
+    public func setTextColor(_ color: UIColor, tag: Int? = nil) {
         if let label = self as? UILabel {
             if tag == nil || label.tag == tag {
                 label.textColor = color
@@ -72,7 +72,7 @@ extension UIView {
         
         if let button = self as? UIButton {
             if tag == nil || button.tag == tag {
-                button.setTitleColor(color, forState: .Normal)
+                button.setTitleColor(color, for: UIControlState())
             }
             return
         }

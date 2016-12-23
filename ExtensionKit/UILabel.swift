@@ -11,8 +11,8 @@ import UIKit
 
 extension UILabel {
     
-    public func setHtmlText(html: String) {
-        let encodedData = html.dataUsingEncoding(NSUnicodeStringEncoding)!
+    public func setHtmlText(_ html: String) {
+        let encodedData = html.data(using: String.Encoding.unicode)!
         let attributedOptions = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType]
         do {
             let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
@@ -22,7 +22,7 @@ extension UILabel {
         }
     }
     
-    public func setLineSpacing(spacing: CGFloat) {
+    public func setLineSpacing(_ spacing: CGFloat) {
         if let text = self.text {
             let attributeString = NSMutableAttributedString(string: text)
             let style = NSMutableParagraphStyle()
