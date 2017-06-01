@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension UILabel {
     
     public func setHtmlText(_ html: String) {

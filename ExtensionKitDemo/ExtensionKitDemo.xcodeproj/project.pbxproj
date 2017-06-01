@@ -12,13 +12,14 @@
 		FB10B47F1D362B330017F6CE /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B47B1D362B330017F6CE /* UILabel.swift */; };
 		FB10B4801D362B330017F6CE /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B47C1D362B330017F6CE /* UITableViewCell.swift */; };
 		FB10B4821D3729640017F6CE /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B4811D3729640017F6CE /* UINavigationBar.swift */; };
-		FBE00C011E0D189C0054F453 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE00C001E0D189C0054F453 /* CALayer.swift */; };
+		FBE00C031E0D1D950054F453 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE00C021E0D1D950054F453 /* CALayer.swift */; };
 		FBE279B51CF3FC810022A951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE279B41CF3FC810022A951 /* AppDelegate.swift */; };
 		FBE279B71CF3FC810022A951 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE279B61CF3FC810022A951 /* ViewController.swift */; };
 		FBE279BA1CF3FC810022A951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE279B81CF3FC810022A951 /* Main.storyboard */; };
 		FBE279BC1CF3FC810022A951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE279BB1CF3FC810022A951 /* Assets.xcassets */; };
 		FBE279BF1CF3FC810022A951 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE279BD1CF3FC810022A951 /* LaunchScreen.storyboard */; };
 		FBE279CB1CF3FFD60022A951 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE279CA1CF3FFD60022A951 /* UIView.swift */; };
+		FBFA5DDD1EDEC20B00AFA29E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFA5DDC1EDEC20B00AFA29E /* UITextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,7 @@
 		FB10B47B1D362B330017F6CE /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = ../../ExtensionKit/UILabel.swift; sourceTree = "<group>"; };
 		FB10B47C1D362B330017F6CE /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCell.swift; path = ../../ExtensionKit/UITableViewCell.swift; sourceTree = "<group>"; };
 		FB10B4811D3729640017F6CE /* UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationBar.swift; path = ../../ExtensionKit/UINavigationBar.swift; sourceTree = "<group>"; };
-		FBE00C001E0D189C0054F453 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		FBE00C021E0D1D950054F453 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = ../../ExtensionKit/CALayer.swift; sourceTree = "<group>"; };
 		FBE279B11CF3FC800022A951 /* ExtensionKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE279B41CF3FC810022A951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE279B61CF3FC810022A951 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		FBE279BE1CF3FC810022A951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE279C01CF3FC810022A951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBE279CA1CF3FFD60022A951 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ../../ExtensionKit/UIView.swift; sourceTree = "<group>"; };
+		FBFA5DDC1EDEC20B00AFA29E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextView.swift; path = ../../ExtensionKit/UITextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +84,14 @@
 		FBE279CC1CF3FFEF0022A951 /* ExtensionKit */ = {
 			isa = PBXGroup;
 			children = (
+				FBE00C021E0D1D950054F453 /* CALayer.swift */,
 				FB10B4791D362B330017F6CE /* UIColor.swift */,
 				FB10B47A1D362B330017F6CE /* String.swift */,
 				FB10B47B1D362B330017F6CE /* UILabel.swift */,
 				FB10B47C1D362B330017F6CE /* UITableViewCell.swift */,
 				FBE279CA1CF3FFD60022A951 /* UIView.swift */,
 				FB10B4811D3729640017F6CE /* UINavigationBar.swift */,
-				FBE00C001E0D189C0054F453 /* CALayer.swift */,
+				FBFA5DDC1EDEC20B00AFA29E /* UITextView.swift */,
 			);
 			name = ExtensionKit;
 			sourceTree = "<group>";
@@ -120,7 +123,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = wenfeng;
 				TargetAttributes = {
 					FBE279B01CF3FC800022A951 = {
@@ -171,7 +174,8 @@
 				FB10B4821D3729640017F6CE /* UINavigationBar.swift in Sources */,
 				FBE279CB1CF3FFD60022A951 /* UIView.swift in Sources */,
 				FB10B47F1D362B330017F6CE /* UILabel.swift in Sources */,
-				FBE00C011E0D189C0054F453 /* CALayer.swift in Sources */,
+				FBE00C031E0D1D950054F453 /* CALayer.swift in Sources */,
+				FBFA5DDD1EDEC20B00AFA29E /* UITextView.swift in Sources */,
 				FB10B4801D362B330017F6CE /* UITableViewCell.swift in Sources */,
 				FBE279B51CF3FC810022A951 /* AppDelegate.swift in Sources */,
 			);
@@ -213,8 +217,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -259,8 +265,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -279,6 +287,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
