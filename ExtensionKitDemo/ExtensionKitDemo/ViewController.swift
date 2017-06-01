@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         view.addSubview(textView)
         textView.setFont(13)
         
-        textView.layer.addDashBorder(UIColor.lightGray)
+        textView.layer.addBorder(UIColor.lightGray)
         
         textView.addPlaceholder("请输入..")
     }

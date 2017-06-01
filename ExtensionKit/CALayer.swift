@@ -13,7 +13,7 @@ extension CALayer {
     @discardableResult
     public func addBorder(_ color: UIColor, thickness: CGFloat = 1, edge: UIRectEdge = .all) -> [UIRectEdge.RawValue: CALayer] {
         let border = CALayer()
-        var result: [UIRectEdge.RawValue: CALayer]!
+        var result: [UIRectEdge.RawValue: CALayer] = [:]
         
         switch edge {
         case UIRectEdge.top:
