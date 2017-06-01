@@ -10,34 +10,55 @@ import UIKit
 
 extension CALayer {
     
-    public func addBorder(_ color: UIColor, edge: UIRectEdge = .all, thickness: CGFloat = 1) {
-        
+    @discardableResult
+    public func addBorder(_ color: UIColor, thickness: CGFloat = 1, edge: UIRectEdge = .all) -> [UIRectEdge.RawValue: CALayer] {
         let border = CALayer()
+        var result: [UIRectEdge.RawValue: CALayer]!
         
         switch edge {
         case UIRectEdge.top:
             border.frame = CGRect(x: 0, y: 0, width: frame.width, height: thickness)
+            result[edge.rawValue] = border
             break
         case UIRectEdge.bottom:
             border.frame = CGRect(x: 0, y: frame.height - thickness, width: frame.width, height: thickness)
+            result[edge.rawValue] = border
             break
         case UIRectEdge.left:
             border.frame = CGRect(x: 0, y: 0, width: thickness, height: frame.height)
+            result[edge.rawValue] = border
             break
         case UIRectEdge.right:
             border.frame = CGRect(x: frame.width - thickness, y: 0, width: thickness, height: frame.height)
+            result[edge.rawValue] = border
             break
         case UIRectEdge.all:
-            self.addBorder(color, edge: .top, thickness: thickness)
-            self.addBorder(color, edge: .right, thickness: thickness)
-            self.addBorder(color, edge: .bottom, thickness: thickness)
-            self.addBorder(color, edge: .left, thickness: thickness)
-            break
+            for direction in [UIRectEdge.top, UIRectEdge.right, UIRectEdge.bottom, UIRectEdge.left] {
+                result[direction.rawValue] = self.addBorder(color, thickness: thickness, edge: direction)[direction.rawValue]
+            }
+            return result
         default:
             break
         }
         
         border.backgroundColor = color.cgColor;
         self.addSublayer(border)
+        
+        return result
+    }
+    
+    @discardableResult
+    public func addDashBorder(_ color: UIColor, thickness: CGFloat = 1, dashPattern: [NSNumber] = [4, 2]) -> CAShapeLayer {
+        let border = CAShapeLayer()
+        border.strokeColor = color.cgColor
+        border.lineWidth = thickness
+        border.fillColor = nil
+        border.lineDashPattern = dashPattern
+        
+        self.addSublayer(border)
+        border.path = UIBezierPath(rect: self.bounds).cgPath
+        border.frame = self.bounds
+        
+        return border
     }
 }

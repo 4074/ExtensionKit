@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "ExtensionKit"
   spec.version      = "0.1.1"
-  spec.authors      = { "4074" => "never_wind@163.com" }
+  spec.authors      = { "4074" => "fourzerosevenfour@gmail.com" }
   spec.homepage     = "https://github.com/4074/ExtensionKit"
   spec.summary      = "Extensions in Swift"
   spec.source       = { :git => "https://github.com/4074/ExtensionKit.git" }
