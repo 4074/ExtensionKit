@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         let imageView = UIImageView(frame: CGRect(x: 16, y: 100, width: 200, height: 100))
         view.addSubview(imageView)
-        imageView.image = UIImage(named: "1")!.resize(to: CGSize(width: 200, height: 100))
+        imageView.image = UIImage(named: "1")!.resize(to: CGSize(width: 200, height: 100), type: 1)
     }
 
     override func didReceiveMemoryWarning() {
