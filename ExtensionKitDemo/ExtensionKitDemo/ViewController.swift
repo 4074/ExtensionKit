@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         initTextView()
+        
+        let imageView = UIImageView(frame: CGRect(x: 16, y: 100, width: 200, height: 100))
+        view.addSubview(imageView)
+        imageView.image = UIImage(named: "1")!.resize(to: CGSize(width: 200, height: 100))
     }
 
     override func didReceiveMemoryWarning() {
