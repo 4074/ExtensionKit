@@ -13,6 +13,7 @@
 		FB10B4801D362B330017F6CE /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B47C1D362B330017F6CE /* UITableViewCell.swift */; };
 		FB10B4821D3729640017F6CE /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B4811D3729640017F6CE /* UINavigationBar.swift */; };
 		FBA908881F13227E0071AEE3 /* TouchThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA908871F13227E0071AEE3 /* TouchThroughView.swift */; };
+		FBA9088A1F1376480071AEE3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA908891F1376480071AEE3 /* UIViewController.swift */; };
 		FBE00C031E0D1D950054F453 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE00C021E0D1D950054F453 /* CALayer.swift */; };
 		FBE279B51CF3FC810022A951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE279B41CF3FC810022A951 /* AppDelegate.swift */; };
 		FBE279B71CF3FC810022A951 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE279B61CF3FC810022A951 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		FB10B47C1D362B330017F6CE /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCell.swift; path = ../../ExtensionKit/UITableViewCell.swift; sourceTree = "<group>"; };
 		FB10B4811D3729640017F6CE /* UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UINavigationBar.swift; path = ../../ExtensionKit/UINavigationBar.swift; sourceTree = "<group>"; };
 		FBA908871F13227E0071AEE3 /* TouchThroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchThroughView.swift; path = ../../ExtensionKit/TouchThroughView.swift; sourceTree = "<group>"; };
+		FBA908891F1376480071AEE3 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController.swift; path = ../../ExtensionKit/UIViewController.swift; sourceTree = "<group>"; };
 		FBE00C021E0D1D950054F453 /* CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CALayer.swift; path = ../../ExtensionKit/CALayer.swift; sourceTree = "<group>"; };
 		FBE279B11CF3FC800022A951 /* ExtensionKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtensionKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE279B41CF3FC810022A951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				FBFA5DDC1EDEC20B00AFA29E /* UITextView.swift */,
 				FBFA5DDE1EE00CF900AFA29E /* UIImage.swift */,
 				FBA908871F13227E0071AEE3 /* TouchThroughView.swift */,
+				FBA908891F1376480071AEE3 /* UIViewController.swift */,
 			);
 			name = ExtensionKit;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				FB10B47E1D362B330017F6CE /* String.swift in Sources */,
 				FB10B4821D3729640017F6CE /* UINavigationBar.swift in Sources */,
 				FBE279CB1CF3FFD60022A951 /* UIView.swift in Sources */,
+				FBA9088A1F1376480071AEE3 /* UIViewController.swift in Sources */,
 				FB10B47F1D362B330017F6CE /* UILabel.swift in Sources */,
 				FBE00C031E0D1D950054F453 /* CALayer.swift in Sources */,
 				FBFA5DDD1EDEC20B00AFA29E /* UITextView.swift in Sources */,
