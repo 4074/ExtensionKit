@@ -8,15 +8,15 @@
 
 import UIKit
 
-class TouchThroughTableView: UITableView {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+public class TouchThroughTableView: UITableView {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.next?.touchesBegan(touches, with: event)
         super.touchesBegan(touches, with: event)
     }
 }
 
-class TouchThroughCollectionView: UICollectionView {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+public class TouchThroughCollectionView: UICollectionView {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.next?.touchesBegan(touches, with: event)
         super.touchesBegan(touches, with: event)
     }
