@@ -95,6 +95,48 @@ extension UIView {
             view.setTextColor(color, tag: tag)
         }
     }
+    
+    public func createSpinView(_ backgroundColor: UIColor, spinColor: UIColor? = nil, size: CGSize = CGSize(width: 60, height: 60)) -> (component: UIView, spin: UIActivityIndicatorView) {
+        
+        let backgroundView = UIView(frame: self.frame)
+        backgroundView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6)
+        backgroundView.isHidden = true
+        
+        let x = (self.frame.width - size.width) / 2
+        let y = (self.frame.height - size.height) / 2
+        let aiView = UIActivityIndicatorView(frame: CGRect(x: x, y: y, width: size.width, height: size.height))
+        backgroundView.addSubview(aiView)
+        aiView.color = spinColor ?? self.tintColor
+        
+        return (component: backgroundView, spin: aiView)
+    }
+    
+    public func toggleSpinView(_ views: (component: UIView, spin: UIActivityIndicatorView), visible: Bool = true) {
+        
+        if views.component.isHidden == !visible {
+            return
+        }
+        
+        if visible {
+            views.component.layer.opacity = 0
+            views.component.isHidden = !visible
+            views.spin.startAnimating()
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.layer.opacity = 1
+            }, completion: { _ -> Void in
+            })
+        } else {
+            UIView.animate(withDuration: 0.4, animations: {
+                views.component.layer.opacity = 0
+            }, completion: { _ -> Void in
+                views.component.isHidden = !visible
+                views.component.layer.opacity = 1
+                
+                views.spin.stopAnimating()
+            })
+        }
+    }
 }
 
 
