@@ -15,6 +15,6 @@ extension String {
     }
     
     public func split(_ separator: Character) -> [String] {
-        return self.characters.split(separator: separator).map(String.init)
+        return self.split(separator: separator).map(String.init)
     }
 }

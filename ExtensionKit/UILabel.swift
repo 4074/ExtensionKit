@@ -12,9 +12,14 @@ extension UILabel {
     
     public func setHtmlText(_ html: String) {
         let encodedData = html.data(using: String.Encoding.unicode)!
-        let attributedOptions = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType]
+//        let attributedOptions = [.documentType: NSAttributedString.DocumentType.html]
         do {
-            let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
+            let attributedString = try NSAttributedString(data: encodedData,
+                                   options: [.documentType: NSAttributedString.DocumentType.html,
+                                             .characterEncoding: String.Encoding.utf8.rawValue],
+                                   documentAttributes: nil)
+//            let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
+//            let attributedString = try NSAttributedString(string: html, attributes: attributedOptions)
             self.attributedText = attributedString
         } catch {
             print("UILabel setHtmlText(\(html)) has errors!")
@@ -28,7 +33,7 @@ extension UILabel {
             
             style.lineSpacing = spacing
             style.alignment = self.textAlignment
-            attributeString.addAttributes([NSParagraphStyleAttributeName: style], range: NSRange(location: 0, length: text.characters.count))
+            attributeString.addAttributes([NSAttributedStringKey.paragraphStyle: style], range: NSRange(location: 0, length: text.count))
             self.attributedText = attributeString
         }
     }
