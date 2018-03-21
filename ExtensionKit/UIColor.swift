@@ -39,4 +39,20 @@ extension UIColor {
         
         return String(format:"#%06x", color)
     }
+    
+    public func to(target: UIColor, ratio: CGFloat) -> UIColor {
+        let ratio = min(max(ratio, 0), 1)
+        var s_red: CGFloat = 0, s_green: CGFloat = 0, s_blue: CGFloat = 0, s_alpha: CGFloat = 0
+        self.getRed(&s_red, green: &s_green, blue: &s_blue, alpha: &s_alpha)
+        
+        var t_red: CGFloat = 0, t_green: CGFloat = 0, t_blue: CGFloat = 0, t_alpha: CGFloat = 0
+        target.getRed(&t_red, green: &t_green, blue: &t_blue, alpha: &t_alpha)
+        
+        let red = (t_red - s_red) * ratio + s_red
+        let green = (t_green - s_green) * ratio + s_green
+        let blue = (t_blue - s_blue) * ratio + s_blue
+        let alpha = (t_alpha - s_alpha) * ratio + s_alpha
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
 }

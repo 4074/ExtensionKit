@@ -61,4 +61,32 @@ extension CALayer {
         
         return border
     }
+    
+    private func addShadowWithRoundedCorners() {
+        if let contents = self.contents {
+            masksToBounds = false
+            sublayers?.filter{ $0.frame.equalTo(self.bounds) }
+                .forEach{ $0.roundCornersWithShadow(radius: self.cornerRadius) }
+            self.contents = nil
+            if let sublayer = sublayers?.first,
+                sublayer.name == "EXTENSION_KIT_addShadowWithRoundedCorners" {
+                
+                sublayer.removeFromSuperlayer()
+            }
+            let contentLayer = CALayer()
+            contentLayer.name = "EXTENSION_KIT_addShadowWithRoundedCorners"
+            contentLayer.contents = contents
+            contentLayer.frame = bounds
+            contentLayer.cornerRadius = cornerRadius
+            contentLayer.masksToBounds = true
+            insertSublayer(contentLayer, at: 0)
+        }
+    }
+    
+    public func roundCornersWithShadow(radius: CGFloat) {
+        self.cornerRadius = radius
+        if shadowOpacity != 0 {
+            addShadowWithRoundedCorners()
+        }
+    }
 }

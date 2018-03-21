@@ -96,10 +96,10 @@ extension UIView {
         }
     }
     
-    public func createSpinView(_ backgroundColor: UIColor, spinColor: UIColor? = nil, size: CGSize = CGSize(width: 60, height: 60)) -> (component: UIView, spin: UIActivityIndicatorView) {
+    public func createSpinView(_ backgroundColor: UIColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6), spinColor: UIColor? = nil, size: CGSize = CGSize(width: 60, height: 60)) -> (component: UIView, spin: UIActivityIndicatorView) {
         
         let backgroundView = UIView(frame: self.frame)
-        backgroundView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.6)
+        backgroundView.backgroundColor = backgroundColor
         backgroundView.isHidden = true
         
         let x = (self.frame.width - size.width) / 2
