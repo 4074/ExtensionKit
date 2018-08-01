@@ -123,7 +123,7 @@ extension UIView {
             views.spin.startAnimating()
             
             UIView.animate(withDuration: 0.2, animations: {
-                self.layer.opacity = 1
+                views.component.layer.opacity = 1
             }, completion: { _ -> Void in
             })
         } else {
