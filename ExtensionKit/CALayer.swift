@@ -55,9 +55,9 @@ extension CALayer {
         border.fillColor = nil
         border.lineDashPattern = dashPattern
         
-        self.addSublayer(border)
-        border.path = UIBezierPath(rect: self.bounds).cgPath
-        border.frame = self.bounds
+        addSublayer(border)
+        border.path = UIBezierPath(rect: CGRect(x: thickness/2, y: thickness/2, width: bounds.width - thickness, height: bounds.height - thickness)).cgPath
+        border.frame = bounds
         
         return border
     }

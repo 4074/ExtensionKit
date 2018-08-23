@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 100, width: 375, height: 40))
         view.addSubview(imageView)
         imageView.image = UIImage(named: "g")!.resize(to: CGSize(width: 375, height: 40), type: 1)
+        
+        initBorderView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +36,14 @@ class ViewController: UIViewController {
         textView.layer.addBorder(UIColor.lightGray)
         
         textView.addPlaceholder("请输入..")
+    }
+    
+    func initBorderView() {
+        let borderView = UIView(frame: CGRect(x: 32, y: 200, width: 140, height: 140))
+        borderView.layer.addDashBorder(.gray, thickness: 1, dashPattern: [6, 4])
+        borderView.layer.masksToBounds = true
+        view.addSubview(borderView)
+        
     }
 }
 
