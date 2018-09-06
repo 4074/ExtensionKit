@@ -9,17 +9,16 @@
 import UIKit
 
 extension UIImage {
-    public func resize(to: CGSize, type: Int = 0) -> UIImage {
+    public func resize(to: CGSize, type: UIView.ContentMode = .scaleAspectFit) -> UIImage {
         let origin = self.size
-        
         let widthRatio = to.width / origin.width
         let heightRatio = to.height / origin.height
-        let ratio = type == 0 ? min(widthRatio, heightRatio) : max(widthRatio, heightRatio)
+        let ratio = type == .scaleAspectFit ? min(widthRatio, heightRatio) : max(widthRatio, heightRatio)
         let size = CGSize(width: origin.width * ratio, height: origin.height * ratio)
         
-        let rect = CGRect(x: (to.width - size.width) / 2, y: (to.height - size.height) / 2, width: size.width, height: size.height)
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         
-        UIGraphicsBeginImageContextWithOptions(to, false, 1)
+        UIGraphicsBeginImageContextWithOptions(size, false, 1)
         self.draw(in: rect)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()!
