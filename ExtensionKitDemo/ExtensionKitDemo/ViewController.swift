@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 100, width: 375, height: 40))
         view.addSubview(imageView)
-        imageView.image = UIImage(named: "g")!.resize(to: CGSize(width: 375, height: 40), type: 1)
+        imageView.image = UIImage(named: "g")!.resize(to: CGSize(width: 375, height: 40))
         
         initBorderView()
     }

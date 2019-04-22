@@ -33,7 +33,7 @@ extension UILabel {
             
             style.lineSpacing = spacing
             style.alignment = self.textAlignment
-            attributeString.addAttributes([NSAttributedStringKey.paragraphStyle: style], range: NSRange(location: 0, length: text.count))
+            attributeString.addAttributes([NSAttributedString.Key.paragraphStyle: style], range: NSRange(location: 0, length: text.count))
             self.attributedText = attributeString
         }
     }

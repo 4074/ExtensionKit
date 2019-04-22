@@ -72,7 +72,7 @@ extension UIView {
         
         if let button = self as? UIButton {
             if tag == nil || button.tag == tag {
-                button.setTitleColor(color, for: UIControlState())
+                button.setTitleColor(color, for: UIControl.State())
             }
             return
         }
